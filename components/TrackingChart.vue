@@ -5,7 +5,9 @@
       <v-spacer />
     </v-card-title>
     <v-card-text>
-      <D3LineChart :config="chart_config" :datum="prices"></D3LineChart>
+      <D3LineChart :config="chart_config" :datum="prices" />
+      <!-- <br />
+      <D3LineChart :config="chart_config_avg" :datum="prices" /> -->
     </v-card-text>
   </v-card>
 </template>
@@ -38,29 +40,69 @@ export default {
           key: false,
           keys: false,
           scheme: false,
-          current: '#64C828',
+          current: '#1f77b4',
           default: '#AAA',
           axis: '#000',
         },
-        curve: 'curveStepAfter',
+        curve: 'curveLinear',
         margin: {
           top: 20,
-          right: 10,
+          right: 20,
           bottom: 20,
-          left: 30,
+          left: 40,
         },
         points: {
           visibleSize: 1,
-          hoverSize: 6,
+          hoverSize: 8,
         },
         tooltip: {
-          labels: ['price'],
+          labels: false,
         },
         transition: {
           duration: 350,
           ease: 'easeLinear',
         },
       },
+      // chart_config_avg: {
+      //   date: {
+      //     key: 'date',
+      //     inputFormat: '%Y-%m-%d',
+      //     outputFormat: '%b-%d',
+      //   },
+      //   values: ['avg_price'],
+      //   axis: {
+      //     yTitle: 'AVG Price (€)',
+      //     yFormat: '.0f',
+      //     yTicks: 3,
+      //     xTicks: 14,
+      //   },
+      //   color: {
+      //     key: false,
+      //     keys: false,
+      //     scheme: false,
+      //     current: '#1f77b4',
+      //     default: '#AAA',
+      //     axis: '#000',
+      //   },
+      //   curve: 'curveLinear',
+      //   margin: {
+      //     top: 20,
+      //     right: 10,
+      //     bottom: 20,
+      //     left: 30,
+      //   },
+      //   points: {
+      //     visibleSize: 1,
+      //     hoverSize: 8,
+      //   },
+      //   tooltip: {
+      //     labels: false,
+      //   },
+      //   transition: {
+      //     duration: 350,
+      //     ease: 'easeLinear',
+      //   },
+      // },
     }
   },
   computed: {

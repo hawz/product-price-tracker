@@ -5,5 +5,10 @@
   </v-container>
 </template>
 
-<script>
-</script>
+<script></script>
+
+<style lang="scss" scoped>
+.container {
+  max-width: 3000px!important;
+}
+</style>

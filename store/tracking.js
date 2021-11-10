@@ -35,7 +35,11 @@ const actions = {
       commit('setItemStoreID', parsedURL[1])
       const result = await TrackingRepository.getPrices(state.itemStoreID)
       commit('setPrices', result.data.data)
-      commit('setItemInfo', result.data.item_info)
+      commit('setItemInfo', {
+        ...result.data.item_info,
+        first_day: result.data.data[0],
+        category_variation: result.data.category_variation,
+      })
       dispatch('setLoading', false)
       return Promise.resolve(result.data.data)
     } catch (error) {
@@ -75,7 +79,7 @@ const mutations = {
     state.itemStoreID = id
   },
   setItemInfo(state, itemInfo) {
-    state.itemInfo = itemInfo 
+    state.itemInfo = itemInfo
   },
 }
 

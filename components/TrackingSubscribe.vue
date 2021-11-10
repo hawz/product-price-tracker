@@ -1,7 +1,7 @@
 <template>
   <v-dialog max-width="800">
     <template #activator="{ on, attrs }">
-      <v-btn color="primary" v-bind="attrs" text v-on="on">
+      <v-btn color="orange" v-bind="attrs" text v-on="on">
         Send me updates
       </v-btn>
     </template>

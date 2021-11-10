@@ -50,7 +50,7 @@
     <v-main>
       <Nuxt />
     </v-main>
-    <v-footer :absolute="!fixed" app>
+    <v-footer app>
       <span>&copy; Trackerli {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
