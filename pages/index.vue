@@ -9,6 +9,6 @@
 
 <style lang="scss" scoped>
 .container {
-  max-width: 3000px!important;
+  max-width: 3000px !important;
 }
 </style>

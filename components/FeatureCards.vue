@@ -71,7 +71,7 @@ export default {
         id: '3',
         title: 'Alerts',
         description:
-          'Subscribe to price and promo alerts and get notified when the price drops!',
+          'Subscribe to price and promo alerts and get email updates when the price drops.',
         color: 'blue',
         icon: 'mdi-cart',
       },
